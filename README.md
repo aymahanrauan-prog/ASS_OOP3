@@ -1,51 +1,51 @@
 # Hotel Reservation System 🏨
 
-Система бронирования отелей, реализованная на чистом Java с использованием JDBC и собственного REST-сервера. Проект демонстрирует применение ключевых принципов разработки и архитектурных паттернов.
+A robust Hotel Reservation System built with Pure Java, featuring JDBC integration and a custom REST server. This project demonstrates core backend development principles and architectural patterns.
 
 ---
 
-## 🛠 Технологии и требования
+## 🛠 Features & Requirements Covered
 
-Проект охватывает следующие концепции и инструменты:
+This project implements the following technical requirements:
 
-### Core Java & Архитектура
-* **OOP:** Полное использование инкапсуляции, наследования, полиморфизма и абстракции.
-* **SOLID:** Строгое соблюдение принципов (обязательное использование **DIP**).
-* **Layered Structure:** Четкое разделение по пакетам (API, Service, DAO, Model).
-* **Generics & Lambdas:** Использование обобщений и функционального программирования.
-* **Reflection API:** Использование рефлексии для мета-программирования.
+### Core Java & Architecture
+* **OOP Principles:** Full implementation of Encapsulation, Inheritance, Polymorphism, and Abstraction.
+* **SOLID:** Strict adherence to principles, specifically focusing on **Dependency Inversion (DIP)**.
+* **Layered Package Structure:** Clear separation of concerns (API, Service, DAO, Model).
+* **Generics & Lambdas:** Used for clean and reusable code.
+* **Reflection API:** Implementation of reflection for dynamic operations.
 
-### Работа с данными
-* **PostgreSQL + JDBC:** Взаимодействие с базой данных через `PreparedStatement`.
-* **DataPool:** Фильтрация, сортировка и поиск во встроенных коллекциях (in-memory).
-* **Custom Exceptions:** Реализовано минимум 2 собственных типа исключений для обработки бизнес-логики.
+### Data Management
+* **PostgreSQL + JDBC:** Database interaction using `PreparedStatement` for security and performance.
+* **DataPool:** In-memory collection filtering, sorting, and searching.
+* **Custom Exceptions:** At least 2 specialized exceptions for business-logic error handling.
 
-### Паттерны проектирования
-1.  **Builder:** Для гибкого создания сложных объектов.
-2.  **Factory:** Для централизованного инстанцирования компонентов.
+### Design Patterns
+1.  **Builder Pattern:** For flexible object construction.
+2.  **Factory Pattern:** For centralized object instantiation.
 
-### Сетевое взаимодействие
-* **REST API:** Реализовано на чистом Java (`HttpServer`) с поддержкой JSON.
+### Networking
+* **REST API:** Built using pure Java `HttpServer` with JSON support.
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### 1. Подготовка базы данных
-Сначала создайте структуру БД и (опционально) заполните её тестовыми данными:
-* Выполните SQL-скрипт: `sql/01_schema.sql`
-* *(Опционально)* Выполните: `sql/02_seed.sql`
+### 1. Database Setup
+Create the database schema and (optionally) populate it with initial data:
+* Execute: `sql/01_schema.sql`
+* *(Optional)* Execute: `sql/02_seed.sql`
 
-### 2. Конфигурация
-Настройте параметры подключения к вашей БД в файле:
+### 2. Configuration
+Configure your database connection credentials in:
 `src/main/java/kz/hotel/config/AppConfig.java`
 
-### 3. Сборка и запуск
-Соберите проект с помощью Maven и запустите JAR-файл:
+### 3. Build and Run
+Use Maven to package the project and run the JAR:
 
 ```bash
-# Сборка проекта
+# Build the project
 mvn -q -DskipTests package
 
-# Запуск приложения
+# Run the application
 java -jar target/HotelReservationSystem-1.0.0.jar
