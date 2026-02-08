@@ -1,0 +1,11 @@
+SOLID / DIP / SRP short explanation
+
+SRP:
+- DB only creates Connection
+- Repositories only SQL
+- Services only business logic
+- ConsoleMenu only I/O
+
+DIP:
+- Services depend on interfaces (RoomRepository, GuestRepository...)
+- Concrete JDBC classes are created in AppFactory (Factory pattern)
